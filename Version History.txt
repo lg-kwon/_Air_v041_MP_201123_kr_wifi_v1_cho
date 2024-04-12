@@ -1,0 +1,86 @@
+V009-20151026
+ 1. Key Button 추가(살균, 소독)
+ 2. LED 추가(White, Blue, Red)
+ 3. 포트 변경
+
+V010_20151030
+ 1. 플라즈마 세기(Step 2,3에서, 5분가동 --> 25분 휴지 --> 5분가동 -->...)
+
+V012_20160121
+ 1. 원격 오존 센서 모듈 추가로 인한 수정(#define ADD_REMOTE_OZONE_MODULE)
+
+V013_20160202
+ 1. 분해모드에서 LED 색을 붉은 색으로 변경
+
+V014_20160222
+ 1. 원격 오존센서 모듈에서 수신하는 값을 6단계로 구분하여 수신
+
+V015_20161124
+ 1. 디폴트 모드(sysConfig.modeFlag)를 살균모드로 변경
+ 2. 원격 오존 센서 Disable(ADD_REMOTE_OZONE_SENSOR 주석 처리)
+ 3. #define CHANGE_OZONE_LAMP     4000 //8000 경고시간 단축
+    #define CHANGE_UV_LAMP        4000 //8000 경고시간 단축
+    #define CHANGE_FILTER         4000 //8000 경고시간 단축
+
+V022-190711 by SJM
+ 1. ENGLISH_VOICE : 영문 음성 추가
+ 2. INCLUDE_TIME_SETTING : 시간/븐 설정 기능 추가
+
+- INCLUDE_BD_DEBUG
+- INCLUDE__REMOTE_ACK
+- UNIFY_SOURCE
+- INCLUDE_CHECK_BASE
+
+v025026-190828 by SJM
+- Totally revised edition release : 루마니아 5대, 우리병원 3대
+
+v027028-190926 by SJM
+- 예약동작 시작후 1시간동안 계속 재실행되는 Bug
+
+v029030-191111 by SJM
+- 살균/음이온 연속동작 상태에서도 예약동작이 진행될 수 있도록 수정 (191111 메일 참고)
+
+v031032-191120 by SJM
+- 파워 OFF후 ON시 오존분해동작후 undefined state로 빠지는 경우 방지
+- 예약동작 진행후 플라즈마 모드에서 PID Off해도 PID감지되는 버그 수정
+
+v035036-200505 by SJM
+- 사용자가 리모콘으로 플라즈마 모드 작동시, 분해 완료후 Power_Off 상태로 가는 버그 수정
+- 연속모드 동작중 예약동작 실행시, 이전 모드의 릴레이 안끄는 버그 수정
+- normalPlasmaSter()가 지정된 주기+1초 주기로 도는 버그 수정
+- ADC_REFERENCE_3V : ADC reference 전압에 따라 sensor reading 변경
+- 연속동작 실행후 Stop/Power-Off후 예약동작이 연속동작으로 실행되는 bug 수정
+- consumableCheck 함수를 handleInit()에서 checkStart()로 이동
+- Plasma연속모드 Stop시 시간대신 On으로 표시
+- Plasma 모드에서 연속Run과 PID가 동시에 ON되는 경우 없도록 방지.
+- ozone Limit 설정기능(40~90)
+- INCLUDE_STRENGTHEN_OZONE : 
+	50초 ON, 10초 OFF
+	destructionTimer : 30분 고정 ==> 30~60분
+
+v037038-200621 by SJM
+- 플라즈마 동작 시간을 5~60, 5단위를 10~240, 10단위로 변경
+- 예약동작 동작 시간을 95분 고정에서, 30~240, 30단위로 변경
+- 분해모드 동작 시간을 30분 고정에서 30~120분,(플라즈마 동작 시간 반영)으로 변경
+- 플라즈마 동작시 ozone lamp on/off를 항상 on으로,
+- 인체감지 ON, 세기 3에서는 on/off 안하고 항상 on으로,
+- Main B/D v2.1에 맞춰 DIP switch 1번으로 B/D 버전 인식. (ADC값 변환 계수가 달라짐)
+- 플라즈마/분해모드 동작시 남은 시간 및 오존 농도 표시 변경 ( hH -> mm -> oz )
+
+(HPA-130W와 HPA-119C source 통합 ==> Air_v037038_Test_200622 및 119_v1112_200621)
+
+v039040-200924
+- HUNGARIAN_ISSUE : 인체감지 Off시 저농도 제어 (Open Loop Control)
+- Ozone Lamp는 세기 3에서 동작
+- Duty Ratio 설정 기능
+- FIX_INTENSITY_CONTROL : P1~P3 식별성 개선
+- EXTEND_PIR_LAMP : PIR lamp 표시 범위 확대
+
+
+
+
+
+
+
+
+
