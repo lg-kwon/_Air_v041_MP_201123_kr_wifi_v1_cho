@@ -11,7 +11,9 @@
   */
 
 /* Includes ------------------------------------------------------------------*/
-#include "main.h"
+
+//git 테스트를 해 본다. 
+#include "main.h"`
 
 /** @addtogroup STM32F4xx_StdPeriph_Examples
   * @{
