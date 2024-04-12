@@ -12,7 +12,7 @@
 
 /* Includes ------------------------------------------------------------------*/
 
-//git 테스트를 해 본다.  다시한번 해본다. KWONILGUN
+//git 테스트를 해 본다.  다시바꾸어본다
 #include "main.h"`
 
 /** @addtogroup STM32F4xx_StdPeriph_Examples
