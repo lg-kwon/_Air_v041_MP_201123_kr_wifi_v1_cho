@@ -682,6 +682,11 @@ int main(void)
 #elif ( MACHINE == HPA_130W )
   printf("\r\n  Wall Type  : HPA-130W\r\n");
 #endif
+
+  printf("\r\n  kwonilgun : git hub test 2024-4-11 \r\n");
+
+
+
   printf("\r\n   Ver %d (Language:%d)\r\n", SW_VERSION,LANGUAGE);
   printf("\r\n  HealthWell Medical Inc. 0401-01 \r\n");
   
