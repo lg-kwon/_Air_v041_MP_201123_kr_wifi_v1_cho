@@ -12,7 +12,7 @@
 
 /* Includes ------------------------------------------------------------------*/
 
-//git 테스트를 해 본다. ㅏ재ㅜ
+//git 테스트를 해 본다.  정말 안되네요
 #include "main.h"`
 
 /** @addtogroup STM32F4xx_StdPeriph_Examples
